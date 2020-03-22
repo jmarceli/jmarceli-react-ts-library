@@ -8,5 +8,7 @@
   },
   "author": "Jan Grzegorowski",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
 }
