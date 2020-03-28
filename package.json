@@ -9,6 +9,7 @@
   "author": "Jan Grzegorowski",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^2.0.2",
     "typescript": "^3.8.3"
   }
 }
