@@ -2,14 +2,20 @@
   "name": "jmarceli-react-ts-library",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
+    "build": "npm run build:clean && npm run build:ts",
+    "build:ts": "npx rollup -c",
+    "build:clean": "rm -rf ./dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Grzegorowski",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.0.2",
+    "rollup": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.27.0",
     "typescript": "^3.8.3"
   }
 }
