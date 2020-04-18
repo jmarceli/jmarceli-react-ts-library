@@ -13,9 +13,14 @@
   "author": "Jan Grzegorowski",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^16.9.27",
     "prettier": "^2.0.2",
+    "react": "^16.13.1",
     "rollup": "^2.2.0",
     "rollup-plugin-typescript2": "^0.27.0",
     "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
   }
 }
