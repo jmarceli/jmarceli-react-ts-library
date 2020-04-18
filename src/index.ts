@@ -12,3 +12,5 @@ const test = (): string => {
 };
 
 console.log(test());
+
+export { Component } from "./component/Component";
