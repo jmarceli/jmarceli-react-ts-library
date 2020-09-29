@@ -5,7 +5,7 @@ import { Component } from "./Component";
 
 describe("<Component />", () => {
   test("rendered text", () => {
-    render(<Component />);
+    render(<Component title="title">sample component</Component>);
     expect(screen.getByText("sample component")).toBeDefined();
   });
 });
