@@ -1,10 +1,15 @@
 import React from "react";
 
-export const Component: React.FC = () => {
+type Props = {
+  children: React.ReactNode;
+  title: string;
+};
+
+export const Component: React.FC<Props> = ({ children, title }) => {
   return (
     <div>
-      <div>jmarceli-react-ts-library</div>
-      <div>sample component</div>
+      <div>{title}</div>
+      <div>{children}</div>
     </div>
   );
 };
