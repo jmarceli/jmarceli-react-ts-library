@@ -1,0 +1,33 @@
+name: Build Storybook and deploy with Github Pages
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    name: Checkout and test
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [12]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm install
+      - run: npm run build-storybook
+
+      - name: Deploy Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: storybook-static # The folder the action should deploy.
