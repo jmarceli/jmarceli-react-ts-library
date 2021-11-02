@@ -3,8 +3,6 @@ name: Build Storybook and deploy with Github Pages
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 jobs:
   test:
@@ -31,7 +29,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-              
+
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
