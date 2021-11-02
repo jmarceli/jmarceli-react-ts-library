@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    name: Checkout and test
+    name: Build and deploy
 
     runs-on: ubuntu-latest
 
